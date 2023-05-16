@@ -1,0 +1,6 @@
+kubeadm join 172.31.39.2:6443 --token vukkt6.b3i3s8unire2svke --discovery-token-ca-cert-hash sha256:d25393a4d9771b38f16ede6f92e60a468645b33c01ec77b1fc0fed316d430e3c
+
+http://192.168.43.142:8080/
+
+$ sudo ufw allow OpenSSH 
+$ sudo ufw enable 

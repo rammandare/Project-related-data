@@ -1,0 +1,13 @@
+---
+- hosts: all
+  name: Copy module
+  become: yes
+  tasks:
+    - name: copy the file to remote machine
+      copy:
+       src: /tmp/result
+       dest: /etc/finalresult
+       owner: root
+       group: root
+       mode: 0644
+

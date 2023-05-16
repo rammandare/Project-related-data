@@ -1,0 +1,29 @@
+<role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+  <user username="deployer" password="devops" roles="manager-script"/>
+  <user username="TomcatAdmin" password="devops" roles="manager-gui"/>
+
+
+root@myubuntu:/home/ram# mvn -version
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 11.0.16, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.15.0-48-generic", arch: "amd64", family: "unix"
+root@myubuntu:/home/ram# 
+
+
+
+[Project1] $ /usr/share/maven/bin/mvn clean install package
+The JAVA_HOME environment variable is not defined correctly
+This environment variable is needed to run this program
+NB: JAVA_HOME should point to a JDK not a JRE
+Build step 'Invoke top-level Maven targets' marked build as failure
+[DeployPublisher][INFO] Build failed, project not deployed
+Finished: FAILURE
+
+command********
+readlink -f `which javac` | sed "s:/bin/javac::"
